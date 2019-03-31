@@ -1,0 +1,21 @@
+Does it divide?
+
+https://www.hackerearth.com/challenges/competitive/march-circuits-19/algorithm/does-it-divide-3c60b8fb/
+
+Max. Marks: 100
+Consider a permutation of numbers  to  written on a paper. Let’s denote the product of its element as  and the sum of its elements as . Given a positive integer , your task is to determine whether  is divisible by  or not. 
+
+Input Format
+There will be multiple test cases, each input will start with an integer  , number of test cases.
+Each test case will contain an integer  , length of the permutation.
+
+Output Format 
+For each test case, print “YES” if  is divisible by , otherwise print “NO”.
+
+SAMPLE INPUT 
+2
+2
+3
+SAMPLE OUTPUT 
+NO
+YES
