@@ -1,0 +1,52 @@
+QUESTION ::
+ 
+https://www.hackerrank.com/challenges/strong-password/problem
+
+EXPLANATION ::
+
+The answer is always   MAX(6-N , 4-D)  where N is string length and D is the number of different type of characters that are already present in the input password.
+
+EDITORIAL SOLUTION ::
+
+   //    in cpp :: 
+
+#include "bits/stdc++.h"
+using namespace std;
+
+const int N = 200005;
+
+int get(char c) {
+   if(c >= '0' && c <= '9') return 0;
+   if(c >= 'a' && c <= 'z') return 1;
+   if(c >= 'A' && c <= 'Z') return 2;
+   return 3;
+}
+
+int main() {
+   int n;
+   string s;
+
+   cin >> n;
+   cin >> s;
+
+   int ans = 0;
+
+   for(int i = 0; i < n; i++) {
+      ans |= (1 << get(s[i]));
+   }
+
+   cout << max(6 - n, 4 - __builtin_popcount(ans));
+   return 0;
+}
+
+
+
+
+//   in python  ::
+
+from string import digits, lowercase, uppercase
+raw_input()
+s = raw_input()
+print max(6 - len(s), sum(not (set(st) & set(s)) for st in (digits, lowercase, uppercase, "!@#$%^&*()-+")))
+
+
